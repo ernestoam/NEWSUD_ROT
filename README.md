@@ -1,0 +1,2 @@
+# NEWSUD_ROT
+NEWSUD rotation
