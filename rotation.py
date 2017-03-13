@@ -4,10 +4,9 @@ newsudrot = pd.DataFrame()
 for i in range(0,91):
 	link = df.Link_Type[i] # link
 	tempnewsud = df.NEWSUD_format[i] # tempnewsud
-	n = df.step_number[i] # length of tempnewsud
 	tempnewsudrot = [] # list of rotations
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'E' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -26,8 +25,9 @@ for i in range(0,91):
 			tempnewsud = tempnewsud[:j] + 'w' + tempnewsud[j+1:]		
 		else:
 			tempnewsud = tempnewsud
-	tempnewsudrot.append(tempnewsud)		
-	for j in range(0,n-1):
+	tempnewsudrot.append(tempnewsud)
+	tempnewsud = df.NEWSUD_format[i]		
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'S' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -47,7 +47,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud			
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'W' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -67,7 +68,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='E':
 			tempnewsud = tempnewsud[:j] + 'U' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='e':
@@ -87,7 +89,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='E':
 			tempnewsud = tempnewsud[:j] + 'W' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='e':
@@ -107,7 +110,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='E':
 			tempnewsud = tempnewsud[:j] + 'D' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='e':
@@ -127,7 +131,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'D' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -147,7 +152,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'S' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -167,7 +173,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'U' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -187,7 +194,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'E' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -215,7 +223,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'S' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -243,7 +252,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'W' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -271,7 +281,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'E' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -299,7 +310,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'W' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -327,7 +339,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud			
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'E' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -352,10 +365,11 @@ for i in range(0,91):
 			tempnewsud = tempnewsud[:j] + 'N' + tempnewsud[j+1:]						
 		elif tempnewsud[j] =='d':
 			tempnewsud = tempnewsud[:j] + 'n' + tempnewsud[j+1:]			
-	else:
+		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'S' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -383,7 +397,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud			
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'W' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -411,7 +426,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud			
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'D' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -439,7 +455,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'D' + tempnewsud[j+1:]	
 		elif tempnewsud[j] =='n':
@@ -467,7 +484,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'D' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -495,7 +513,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'U' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
@@ -523,7 +542,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'U' + tempnewsud[j+1:]
 		elif tempnewsud[j] =='n':
@@ -551,7 +571,8 @@ for i in range(0,91):
 		else:
 			tempnewsud = tempnewsud		
 	tempnewsudrot.append(tempnewsud)
-	for j in range(0,n-1):
+	tempnewsud = df.NEWSUD_format[i]
+	for j in range(0,len(tempnewsud)):
 		if tempnewsud[j] =='N':
 			tempnewsud = tempnewsud[:j] + 'U' + tempnewsud[j+1:]			
 		elif tempnewsud[j] =='n':
